@@ -22,6 +22,6 @@ app.get("/",(req,res)=>{
 })
 
 
-app.listen(process.env.PORT || 4000  ,(err)=>{
+app.listen(process.env.PORT || 5000  ,(err)=>{
     console.log("server is running on  "+ process.env.PORT)
 })
