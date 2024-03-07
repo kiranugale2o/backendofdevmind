@@ -7,9 +7,6 @@ const cookieParser = require('cookie-parser')
 router.use(cookieParser())
 router.use(express.urlencoded({extended:false}))
 router.use(express.json());
-router.get('/',(req,res)=>{
-    res.send("rrr")
-})
 
 router.post('/user/singup',SingUpHandler)
 router.post('/user/login',LoginHandler)
