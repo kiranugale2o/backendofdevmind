@@ -8,13 +8,13 @@ const app=express();
 app.use(require("./router/route"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
-// app.use(cors({
+app.use(cors({
     
-//         "origin": "http://localhost:3000/",
-//         "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+        "origin": "http://localhost:3000/",
+        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
         
       
-// }))
+}))
 
 app.get("/",(req,res)=>{
     res.send("home")
