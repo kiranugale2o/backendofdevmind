@@ -1,5 +1,5 @@
 const express=require("express");
-const cloudinary=require("./utils/cloudinary");
+const cloudinary=require("./utils/cloudinary"); 
 require('dotenv').config();
 require("./DB/connection")
 const User=require("./modules/user.modules")
