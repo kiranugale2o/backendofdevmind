@@ -1,5 +1,5 @@
 const express=require("express");
-const cloudinary=require("./utils/cloudinary");
+const cloudinary=require("./utils/cloudinary"); 
 require('dotenv').config();
 require("./DB/connection")
 const User=require("./modules/user.modules")
@@ -9,19 +9,19 @@ app.use(require("./router/route"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 app.use(cors({
-    
-        "origin": "http://localhost:3000/",
-        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-        
-      
+
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+
 }))
 
 app.get("/",(req,res)=>{
-    res.send("home")
+    res.send("hellocc")
   
 })
 
 
-app.listen(process.env.PORT || 5000  ,(err)=>{
+app.listen(3001  ,(err)=>{
     console.log("server is running on  "+ process.env.PORT)
 })
