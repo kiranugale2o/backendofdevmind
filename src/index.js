@@ -10,14 +10,14 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 app.use(cors({
     
-        "origin": "http://localhost:3000/",
+        "origin": "https://dbackend-uky7.onrender.com",
         "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
         
       
 }))
 
 app.get("/",(req,res)=>{
-    res.send("home")
+    res.send("hello")
   
 })
 
