@@ -20,7 +20,8 @@ const userSchema=new mongoose.Schema({
    },
    userImg:{
     type:String,
-    require:true
+    require:true,
+    defualt:""
    },
    bio:{
     type:String,
@@ -45,6 +46,9 @@ const userSchema=new mongoose.Schema({
         userName:{type:String,require:true},
         userImg:{type:String,require:true}
     }
+   ],
+   posts:[
+    
    ]
    ,
    tokens:[]

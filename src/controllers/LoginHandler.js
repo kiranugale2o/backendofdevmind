@@ -14,17 +14,19 @@ const LoginHandler=async(req,res,next)=>{
               
                 token=await userInfo.generateAuthToken();//call generateAuthToken() inside the userSchema and generate and store token
                  res.cookie("jwt",token);
-               // console.log(token)
+               console.log(token)
+               res.json({message:"success",status:0})
             }else{
-                res.json({"message":"unsuccess"})
+              
+                res.json({message:"password encorrect",status:1})
             }
        
         }else{
-            res.json({"message":"un esuccess"})
+            res.json({message:"invalid email",status:1})
         }
         
     } catch (error) {
-        res.json({"message":"unsuccess"})
+        res.json({"message":"unsuccess"}).status(400)
         console.log("error is occurs")
     }
 }
