@@ -8,13 +8,7 @@ const app=express();
 app.use(require("./router/route"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
-app.use(cors({
-    
-        "origin": "https://dbackend-uky7.onrender.com",
-        "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-        
-      
-}))
+app.use(cors())
 
 app.get("/",(req,res)=>{
     res.send("hello")
