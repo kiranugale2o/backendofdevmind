@@ -47,6 +47,22 @@ const userSchema=new mongoose.Schema({
         userImg:{type:String,require:true}
     }
    ],
+  savedPost:[
+    {
+        userId:{type:String},
+        userName:{type:String},
+        userImg:{type:String},
+        description:{type:String},
+        img:{type:String},
+        likes:[],
+        comments:[{
+            userId:{type:String},
+            userName:{type:String},
+            userImg:{type:String}
+        }]
+    }
+  ]
+  ,
    posts:[
     
    ]
